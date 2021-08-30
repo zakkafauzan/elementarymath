@@ -1,2 +1,1 @@
-# elementarymath
-Soal matematika anak, utk latihan
+Ini adalah soal dasar matematika yang saya buat dan dedikasikan untuk anak-anak saya.
