@@ -27,12 +27,10 @@ public class Latihan {
       else if(name.equals("N") || name.equals("n")) max = 100;
       else if (name.equals("A") || name.equals("a")) max = 20;
 
-      /*Calendar calendar = Calendar.getInstance();
-      Date date = new Date();
-      long startTime = calendar.getTimeInMillis();
-      */
-
       int maxTemp = 0;
+
+      //TODO: tambahin pertanyaan apakah soalnya mau ke samping atau ke bawah
+
       for(int i = 0; i < question; i++){
           int x = (int)(Math.random() * max);
 
@@ -40,13 +38,15 @@ public class Latihan {
           
           // spesifik untuk Arsa, dibuat jangan terlalu sulit, maksimal jumlahnya 30
 
-          boolean isAdd = false;
+          boolean isAdd = true;
           if(includeSub) isAdd = ( Math.random() < 0.5 );
 
           if(isAdd){
             if(max == 20 && x > 0) maxTemp = 30 - x;
             int y = (int)(Math.random() * maxTemp);
             
+            //TODO: kalo pertanyaannya ke bawah, format tampilannya harus diubah sedikit
+
             System.out.print("Berapakah " + x + " + " + y + "? ");
             int ans = in.nextInt();
 
@@ -72,20 +72,7 @@ public class Latihan {
           System.out.println("");
       }
 
-      /*long endTime = date.getTime();
-
-      System.out.println(startTime + " --- " + endTime);
-      long diff = (endTime - startTime);
-
-      System.out.println(diff + " **** " + (int)diff);
-      int minute = 0, second = 0;
-      if(diff > 60) minute = (int)diff / 60;
-      second = (int)diff % 60;
-      */
-
       System.out.println("Kamu berhasil menjawab " + correct + " dari " + question + " pertanyaan loh");
       System.out.println("Nilai kamu adalah " + (correct * 100 / question));
-      
-      //System.out.println("Kamu berhasil menyelesaikan dalam " + minute + " menit dan " + second + " detik");
     }
 }
